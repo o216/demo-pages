@@ -1,0 +1,72 @@
+<!-- 
+Have text that is clickable. Once clicked, it appends a drink from drinkList to the HTML page. 
+
+1. Libraries for code to work - > jquery 
+2. Text to click 
+3. 
+4. Get the index of drinkList 
+5. Print the drink at drinkList index
+6. 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Content!</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+</head>
+<body>
+
+  <h1 id="clickThis">Drink Selection!</h1>
+  <hr>
+
+  <!-- Here we create a generic drink-options div -->
+  <div id="drink-options"></div>
+
+  <script type="text/javascript">
+
+    // Array holds all of the drinks available
+    var drinkList = [
+      "Coffee: $5",
+      "Espresso: $7",
+      "Cappuccino: $6",
+      "Latte: $4",
+      "Tea: $3",
+      "Ice Coffee: $6",
+      "Ice Espresso: $8",
+      "Ice Latte: $6",
+      "Ice Tea: $4"
+    ];
+
+    var index = 0;
+    $("#clickThis").on("click", function(){
+    	console.log(drinkList[index]);
+
+    	index = index + 1;
+    });
+
+  
+    /*var drinkDiv = $("#drink-options");
+
+    
+    for (var i = 0; i < drinkList.length; i++) {
+
+      
+      var newDrinkDiv = $("<div>" + drinkList[i] + "</div>");
+
+      var newDrinkDiv = $("<div>") 
+      newDrinkDiv.html(drinkList[i]);
+
+      
+      drinkDiv.append(newDrinkDiv);
+    }*/
+
+  </script>
+
+</body>
+</html>
